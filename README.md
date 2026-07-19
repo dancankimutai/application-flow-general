@@ -1,4 +1,4 @@
-# Job Application Flow
+# JobApplication Flow
 
 A lightweight workflow for turning a user's existing CV/resume and a job post into a tailored application package.
 

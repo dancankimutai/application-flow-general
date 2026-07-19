@@ -86,9 +86,7 @@ Full Name Cover Letter.docx
 
 Send the PDF by default. Use DOCX only if the employer asks for Word format.
 
-## Privacy
-
-`applications/` is ignored by Git because job applications contain private data.
+.
 
 Do not commit generated CVs, cover letters, phone numbers, emails, or job-specific application folders unless you intentionally want them public.
 

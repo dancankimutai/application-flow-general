@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+qa-*/
+applications/
+master-resume.md
+.DS_Store
+Thumbs.db
+

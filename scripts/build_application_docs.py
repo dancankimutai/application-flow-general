@@ -154,7 +154,7 @@ def build_docx(
         subject = get_subject(lines)
         body_started = False
         for line in lines:
-            if not line or line.startswith("To:"):
+            if not line or line.startswith("To:") or line.startswith("CC:"):
                 continue
             if line.startswith("# "):
                 p = doc.add_paragraph()
@@ -396,7 +396,7 @@ def build_pdf(
         for line in lines:
             if line.startswith("Subject:"):
                 continue
-            if not line or line.startswith("To:"):
+            if not line or line.startswith("To:") or line.startswith("CC:"):
                 continue
             if line.startswith("# "):
                 story.append(Paragraph(escape(profile["name"]), styles["CoverName"]))

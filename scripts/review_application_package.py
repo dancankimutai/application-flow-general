@@ -58,6 +58,10 @@ def check_pdf_pages(path: Path, *, min_pages: int, max_pages: int) -> tuple[bool
     return True, f"{path.name}: {page_count} pages"
 
 
+def extract_pdf_text(path: Path) -> str:
+    return "\n".join((page.extract_text() or "") for page in PdfReader(str(path)).pages)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("application_dir", help="Application folder, for example applications/company-role")
@@ -123,6 +127,10 @@ def main() -> int:
                 notes.append(message)
             else:
                 errors.append(message)
+            if "Cover Letter" in file_name:
+                pdf_text = extract_pdf_text(path)
+                if "\nCC:" in pdf_text or pdf_text.startswith("CC:"):
+                    errors.append("Cover letter PDF includes a CC line in the letter body.")
 
     if errors:
         print("FAILED")

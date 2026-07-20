@@ -16,7 +16,7 @@ REQUIRED_SOURCE_FILES = [
 PLACEHOLDER_TERMS = [
     "Full Name",
     "email@example.com",
-    "phone number",
+    "Phone: phone number",
     "Needs confirmation",
     "Role Name",
     "Company - Application Notes",

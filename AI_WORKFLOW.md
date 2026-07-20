@@ -206,6 +206,25 @@ Then run the generator to create PDF and DOCX files.
 
 Do not simply copy the master resume. Tailor it.
 
+## Resume Headline Rule
+
+Do not copy the advertised job title into the resume headline unless the user has already held that title or explicitly asks for it.
+
+Use a capability-based headline that matches the role while staying honest. The headline should describe what the candidate can do, not pretend they already have the advertised title.
+
+Good examples:
+
+- `ICT Support | Technical Troubleshooting | Customer & Operations Support`
+- `Laboratory Support | Sample Handling | Quality Documentation`
+- `Administration | Customer Service | Records Management`
+- `Data Analysis | Reporting | Spreadsheet Workflows`
+
+Avoid inflated or title-copy headlines such as:
+
+- `Support & Operations Executive`
+- `Senior Data Analyst`
+- `Laboratory Manager`
+
 For each job:
 
 - Rewrite the summary to match the role.
@@ -389,4 +408,3 @@ After generating files, tell the user:
 - Any limitations, such as if visual DOCX render QA could not be completed.
 
 Do not overwhelm the user with the full resume text unless they ask.
-

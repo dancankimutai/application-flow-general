@@ -388,6 +388,7 @@ If `python` is unavailable, use the user's working Python command, such as `py` 
 
 After generating files:
 
+- Run `python scripts\review_application_package.py applications\company-role --prefix "Full Name"` from the repo root, replacing `Full Name` with the user's real name.
 - Confirm the PDF opens and has a reasonable page count.
 - Confirm the CV PDF is usually 1-2 pages.
 - Confirm the cover letter PDF is usually 1 page.
@@ -396,6 +397,21 @@ After generating files:
 - Confirm no placeholder text remains.
 - Confirm no unrelated or distracting experience is over-emphasized.
 - Confirm generated application folders are not staged for Git unless the user explicitly wants that.
+
+## Final Application Review
+
+Before telling the user the package is ready, review the generated `tailored-resume.md` and `cover-email.md` like a recruiter would.
+
+Check:
+
+- The headline is capability-based and does not copy an advertised title the user has not held.
+- The first half page immediately matches the role's strongest needs.
+- The most relevant experience, coursework, or practical work appears before weaker or unrelated content.
+- The cover letter does not say "I have attached my CV and cover letter" inside the cover letter itself. Use "I have attached my CV for your review."
+- The cover letter names the correct company, role, and reference number if known.
+- No wording sounds inflated, desperate, generic, or copied from the job post.
+- Senior terms such as "manager", "lead", "executive", or "specialist" are used only when they honestly fit the user's background.
+- The final answer tells the user which file to send first and whether to paste the cover text or attach the cover letter PDF.
 
 ## Final Response to User
 

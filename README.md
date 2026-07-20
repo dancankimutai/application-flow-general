@@ -23,6 +23,7 @@ The generator script does not write the application content by itself. An AI ass
 - `AI_WORKFLOW.md` - instructions for an AI assistant to intake a user's CV and tailor applications.
 - `master-resume-template.md` - blank template for a user's master resume.
 - `scripts/build_application_docs.py` - converts tailored Markdown into PDF and DOCX files.
+- `scripts/review_application_package.py` - checks a generated package for common mistakes before sending.
 - `requirements.txt` - Python dependencies for document generation.
 
 ## First-Time Setup
@@ -86,7 +87,15 @@ Full Name Cover Letter.docx
 
 Send the PDF by default. Use DOCX only if the employer asks for Word format.
 
-.
+## Review Before Sending
+
+Run the package review after generating files:
+
+```powershell
+python scripts\review_application_package.py applications\company-role --prefix "Full Name"
+```
+
+The review checks for missing files, unresolved placeholders, weak attachment wording, resume headline risks, and PDF page counts.
 
 Do not commit generated CVs, cover letters, phone numbers, emails, or job-specific application folders unless you intentionally want them public.
 

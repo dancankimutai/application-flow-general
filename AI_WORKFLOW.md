@@ -400,7 +400,9 @@ After generating files:
 
 ## Final Application Review
 
-Before telling the user the package is ready, review the generated `tailored-resume.md` and `cover-email.md` like a recruiter would.
+Before telling the user the package is ready, the AI must review the generated `tailored-resume.md`, `cover-email.md`, and the generated PDF text/output like a recruiter would.
+
+Do not rely only on the script passing. The script catches mechanical issues; the AI review must catch judgment issues, weak wording, duplication, and anything that looks awkward to a human reader.
 
 Check:
 
@@ -408,10 +410,16 @@ Check:
 - The first half page immediately matches the role's strongest needs.
 - The most relevant experience, coursework, or practical work appears before weaker or unrelated content.
 - The cover letter does not say "I have attached my CV and cover letter" inside the cover letter itself. Use "I have attached my CV for your review."
+- The same portfolio, phone number, email, or link is not repeated awkwardly in both the paragraph body and signature/footer.
+- Email metadata such as `To:`, `CC:`, or `Subject:` does not appear as part of the formal letter body in the PDF.
 - The cover letter names the correct company, role, and reference number if known.
 - No wording sounds inflated, desperate, generic, or copied from the job post.
+- No sentence is too broad for the application. If the job is specific, the wording should be specific.
+- The application sounds like the candidate is applying for relevant work, not begging for any role.
 - Senior terms such as "manager", "lead", "executive", or "specialist" are used only when they honestly fit the user's background.
 - The final answer tells the user which file to send first and whether to paste the cover text or attach the cover letter PDF.
+
+If the AI finds a wording or positioning issue, it should fix the source Markdown, regenerate the PDF/DOCX, rerun the review script, and only then report that the package is ready.
 
 ## Final Response to User
 
